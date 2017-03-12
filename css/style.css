@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
 /* Базове настройки */
 a:hover, a:focus, a:visited, a:active {
     text-decoration: none;
@@ -124,13 +122,79 @@ section#portfolio .section_header {
     margin-bottom: 20px;
     margin-top: 60px;
 }
-
 /* Футтер */
 footer {
+    margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 10px;
     background-color: #666;
     color: #fff;
+}
+footer h2 {
+    text-transform: uppercase;
+    font-family: 'PFDinTextCondProBold';
+}
+footer address {
+    font-family: 'PFDinTextCondProLight';
+    margin-left: 17px;
+}
+
+footer address #address:before {
+    content: '';
+    background: url(../img/map_point.png) no-repeat center center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+}
+footer #email,
+footer address #name,
+footer .footer_phone #number {
+    margin-top: 0;
+}
+.email__div,
+.footer_phone {
+    /*text-transform: uppercase;*/
+    font-family: 'PFDinTextCondProLight';
+    margin-left: 17px;   
+}
+footer address p#address,
+footer .email__div #email__p,
+footer .footer_phone #footer_phone {
+    /*font-size: 20px;*/
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+footer .footer_phone #footer_phone:before {
+    content: '';
+    background: url(../img/phone_mark.png) no-repeat center center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+}
+
+footer .email__div #email__p:before {
+    content: '';
+    background: url(../img/1email_icon.png) no-repeat center center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+}
+
+footer .details_row {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+footer .details h5 {
+    font-family: 'PFDinTextCondProMedium';
+    font-size: 20px;
+}
+footer .details p {
+    font-family: 'PFDinTextCondProLight';
+    font-size: 17px;
+    text-transform: uppercase;
 }
 
 h1 {
@@ -139,13 +203,25 @@ h1 {
 /*Uncomment the following code to adjust the font size and make it more readable on small screens*/
 
 @media screen and (max-width:600px){
-  h1 {
+  h1, h2, h3 {
+    font-size: 3vw;
+  }
+  h4 {
     font-size: 3vw;
   }
 }
 @media screen and (max-width:980px){
-  h1 {
+  h1, h2, h3 {
     font-size: 5vw;
+  }
+  h4 {
+    font-size: 3vw;
+  }
+
+  #address:before,
+  #footer_phone:before,
+  #email__p:before {
+    zoom: 2.5;
   }
   .phone_number h3,
   .logo {
@@ -157,7 +233,7 @@ h1 {
     margin: 0 auto;
   }
   section#main {
-    margin-top: 320px;
+    margin-top: 300px;
   }
   .description h4 {
     font-size: 36px;
